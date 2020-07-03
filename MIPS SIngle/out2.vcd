@@ -1,0 +1,324 @@
+$date
+	Sun Feb 17 15:27:34 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module mips_32 $end
+$var wire 32 ! alu_result [31:0] $end
+$var wire 32 " pc_out [31:0] $end
+$var wire 1 # zf $end
+$var wire 2 $ src2 [1:0] $end
+$var wire 1 % src1 $end
+$var wire 32 & resultB [31:0] $end
+$var wire 32 ' resultA [31:0] $end
+$var wire 32 ( resB [31:0] $end
+$var wire 32 ) resA [31:0] $end
+$var wire 1 * regWr $end
+$var wire 1 + regDst $end
+$var wire 3 , memtoReg [2:0] $end
+$var wire 1 - memWr $end
+$var wire 1 . memRd $end
+$var wire 1 / maluOp $end
+$var wire 1 0 loWr $end
+$var wire 2 1 loSel [1:0] $end
+$var wire 1 2 jump $end
+$var wire 1 3 jalr $end
+$var wire 32 4 instr [31:0] $end
+$var wire 1 5 hiWr $end
+$var wire 2 6 hiSel [1:0] $end
+$var wire 1 7 branch $end
+$var wire 3 8 aluCtrl [2:0] $end
+$var reg 1 9 clk $end
+$var reg 32 : inp [31:0] $end
+$var reg 6 ; opcode [5:0] $end
+$var reg 32 < pc [31:0] $end
+$var reg 5 = rd [4:0] $end
+$var reg 5 > rs [4:0] $end
+$var reg 1 ? rst $end
+$var reg 5 @ rt [4:0] $end
+$var reg 32 A srcA [31:0] $end
+$var reg 32 B srcB [31:0] $end
+$scope module tb $end
+$var wire 1 9 clk $end
+$var wire 1 5 hiWr $end
+$var wire 1 0 loWr $end
+$var wire 6 C opcode [5:0] $end
+$var wire 1 + regDst $end
+$var wire 1 * regWr $end
+$var wire 1 - memWr $end
+$var wire 1 . memRd $end
+$var wire 1 / maluOp $end
+$var wire 1 2 jump $end
+$var wire 1 3 jalr $end
+$var wire 1 7 branch $end
+$var wire 1 % aluSrcA $end
+$var reg 3 D aluCtrl [2:0] $end
+$var reg 2 E aluSrcB [1:0] $end
+$var reg 2 F hiSel [1:0] $end
+$var reg 2 G loSel [1:0] $end
+$var reg 3 H memtoReg [2:0] $end
+$upscope $end
+$scope module tb1 $end
+$var wire 32 I inp [31:0] $end
+$var wire 5 J rd [4:0] $end
+$var wire 1 * regWr $end
+$var wire 32 K resA [31:0] $end
+$var wire 32 L resB [31:0] $end
+$var wire 5 M rs [4:0] $end
+$var wire 1 ? rst $end
+$var wire 5 N rt [4:0] $end
+$var integer 32 O i [31:0] $end
+$upscope $end
+$scope module tb2 $end
+$var wire 3 P aluCtrl [2:0] $end
+$var wire 32 Q resultA [31:0] $end
+$var wire 32 R resultB [31:0] $end
+$var wire 32 S src1 [31:0] $end
+$var wire 32 T src2 [31:0] $end
+$var wire 1 # zeroFlag $end
+$var reg 64 U resultTemp [63:0] $end
+$var integer 32 V in1 [31:0] $end
+$var integer 32 W in2 [31:0] $end
+$var integer 32 X outA [31:0] $end
+$var integer 32 Y outB [31:0] $end
+$upscope $end
+$scope module tb3 $end
+$var wire 32 Z pc [31:0] $end
+$var wire 5 [ rom_addr [4:0] $end
+$var reg 32 \ instruction [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#2400
+$dumpvars
+b100000000000000100010xxxxxxxxxxx \
+b1 [
+b100 Z
+b0 Y
+b111 X
+b111 W
+b0 V
+bx U
+b111 T
+b0 S
+b0 R
+b111 Q
+b0 P
+b100000 O
+b1 N
+b10 M
+b111 L
+b111 K
+b10 J
+b111 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b100000 C
+b111 B
+b0 A
+b1 @
+1?
+b10 >
+b10 =
+b100 <
+b100000 ;
+b111 :
+09
+b0 8
+07
+b0 6
+05
+b100000000000000100010xxxxxxxxxxx 4
+03
+02
+b0 1
+00
+0/
+0.
+0-
+b0 ,
+1+
+1*
+b111 )
+b111 (
+b111 '
+b0 &
+0%
+b0 $
+0#
+bz "
+bz !
+$end
+#2500
+b100001000000000100010xxxxxxxxxxx 4
+b100001000000000100010xxxxxxxxxxx \
+b10 [
+19
+b1000 <
+b1000 Z
+#2600
+09
+#2700
+19
+#2800
+09
+#2900
+19
+#3000
+09
+#3100
+19
+#3200
+09
+#3300
+19
+#3400
+09
+#3500
+b100001 ;
+b100001 C
+19
+#3600
+b11111111111111111111111111111001 '
+b11111111111111111111111111111001 Q
+b11111111111111111111111111111001 X
+b1 8
+b1 D
+b1 P
+09
+#3700
+b0 )
+b0 K
+b0 >
+b0 M
+19
+#3800
+09
+#3900
+19
+#4000
+09
+#4100
+19
+#4200
+b11111111111111111111111111111001 :
+b11111111111111111111111111111001 I
+09
+#4300
+19
+b11111111111111111111111111111001 )
+b11111111111111111111111111111001 K
+b10 >
+b10 M
+#4400
+09
+#4500
+b110010100010000000 4
+b110010100010000000 \
+b11 [
+19
+b1100 <
+b1100 Z
+#4600
+09
+#4700
+19
+#4800
+09
+#4900
+19
+#5000
+09
+#5100
+19
+#5200
+09
+#5300
+19
+#5400
+09
+#5500
+0+
+b0 ;
+b0 C
+19
+#5600
+b0 '
+b0 Q
+b0 X
+bx 8
+bx D
+bx P
+09
+#5700
+b0 (
+b0 L
+b11 @
+b11 N
+b0 )
+b0 K
+b0 >
+b0 M
+19
+#5800
+09
+#5900
+19
+#6000
+x#
+b0 W
+b0 B
+b0 T
+09
+#6100
+19
+#6200
+b0 :
+b0 I
+b101 =
+b101 J
+09
+#6300
+19
+b101 >
+b101 M
+#6400
+09
+#6500
+b100000000001100000000000000100 4
+b100000000001100000000000000100 \
+b100 [
+19
+b10000 <
+b10000 Z
+#6600
+09
+#6700
+19
+#6800
+09
+#6900
+19
+#7000
+09
+#7100
+19
+#7200
+09
+#7300
+19
+#7400
+09
+#7500
+1+
+13
+b1000 ;
+b1000 C
+19
